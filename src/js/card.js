@@ -3,12 +3,11 @@ import classNames from 'classnames';
 
 import CardMessage from './card_message'
 
-
-
 class Card extends PureComponent {
   state = {
     isSelected: !!this.props.IS_SELECTED,
-    isDisabled: !!this.props.IS_DISABLED
+    isDisabled: !!this.props.IS_DISABLED,
+    isHoverable: !this.props.IS_DISABLED
   };
 
   isSelected() {
@@ -19,13 +18,27 @@ class Card extends PureComponent {
     return this.state.isDisabled;
   }
 
-  cardClickHandler = () => {
-    if (this.isDisabled()) {
-      return;
-    }
+  isHoverable() {
+    return this.state.isHoverable;
+  }
 
+  onClickHandler = () => {
     this.setState(prevState => ({
-      isSelected: !prevState.isSelected
+      isSelected: !prevState.isSelected,
+      isHoverable: false
+    }));
+  };
+
+  onLinkClickHandler = () => {
+    this.setState(prevState => ({
+      isSelected: !prevState.isSelected,
+      isHoverable: true
+    }));
+  };
+
+  onMouseLeaveHandler = () => {
+    this.setState(() => ({
+      isHoverable: true
     }));
   };
 
@@ -33,7 +46,8 @@ class Card extends PureComponent {
     return classNames(
         'card',
         { 'card--disabled': this.isDisabled() },
-        { 'card--active': this.isSelected() }
+        { 'card--active': this.isSelected() },
+        { 'card--hoverable': this.isHoverable() }
     );
   }
 
@@ -93,10 +107,12 @@ class Card extends PureComponent {
     return (
         <Fragment>
           <svg className={classNames('svg', 'card__background')}
-               dangerouslySetInnerHTML={{__html: '<use xlink:href=\'#svgBillet\' />' }} />
+               dangerouslySetInnerHTML={{__html: '<use xlink:href=\'#svgBillet\' />' }}
+          />
 
           <svg className={classNames('svg', 'card__kitty')}
-               dangerouslySetInnerHTML={{__html: '<use xlink:href=\'#svgKitty\' />' }} />
+               dangerouslySetInnerHTML={{__html: '<use xlink:href=\'#svgKitty\' />' }}
+          />
         </Fragment>
     );
   }
@@ -136,23 +152,32 @@ class Card extends PureComponent {
   }
 
   createCardMessage() {
-    const messages = this.props.MESSAGES;
+    const props = {...this.props.MESSAGES};
     const isSelected = this.isSelected();
     const isDisabled = this.isDisabled();
 
     return (
-        <CardMessage {...messages}
+        <CardMessage {...props}
                      isSelected={isSelected}
                      isDisabled={isDisabled}
-                     linkClickHandler={this.cardClickHandler}
+                     onLinkClickHandler={this.onLinkClickHandler}
         />
     );
   }
 
   render() {
+    let billetEvents = {};
+
+    if(!this.isDisabled()) {
+      billetEvents = {
+        onClick: this.onClickHandler,
+        onMouseLeave: this.onMouseLeaveHandler
+      };
+    }
+
     return (
         <div className={this.getCardClassNames()}>
-          <div className='card__billet' onClick={this.cardClickHandler}>
+          <div className='card__billet' {...billetEvents}>
             {Card.createBilletBackgroundParts()}
 
             {this.createInformation()}

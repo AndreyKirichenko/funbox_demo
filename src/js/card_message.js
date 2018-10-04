@@ -30,7 +30,7 @@ class CardMessage extends PureComponent {
   }
 
   createDefault() {
-    const clickHandler = this.props.linkClickHandler;
+    const clickHandler = this.props.onLinkClickHandler;
 
     return (
         <Fragment>

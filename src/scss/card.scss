@@ -109,7 +109,7 @@
 }
 
 
-.card:not(.card--disabled) .card__billet:hover {
+.card--hoverable .card__billet:hover {
   .card__background {
     color: $linkHoverColor;
   }
@@ -130,7 +130,7 @@
   }
 }
 
-.card--active:not(.card--disabled) .card__billet:hover {
+.card--hoverable.card--active .card__billet:hover {
   .card__background,
   .card__tagline {
     color: $activeHoverColor;
