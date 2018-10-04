@@ -8,7 +8,6 @@ let conf = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'app.js',
-    publicPath: 'dist/'
   },
   devServer: {
     overlay: true
@@ -39,10 +38,10 @@ let conf = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'app.css',
+      // path: '/'
     }),
     new HtmlWebpackPlugin({
-      template : './src/pug/index.pug',
-      filename: '../index.html'
+      template : './src/pug/index.pug'
     }),
     new CopyWebpackPlugin([
       { from: 'src/img/', to: 'img/', force: true },

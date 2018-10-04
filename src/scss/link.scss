@@ -1,0 +1,25 @@
+.link {
+  color: $linkColor;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+    bottom: 0;
+    border-bottom: 1px dashed $linkColor;
+    content: '';
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
+
+
+  &:hover {
+    color: $linkHoverColor;
+
+    &:before {
+      border-bottom-color: $linkColor;
+    }
+  }
+}
+

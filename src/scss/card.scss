@@ -1,0 +1,142 @@
+.card {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  position: relative;
+}
+
+.card__billet {
+  display: block;
+  height: 480px;
+  position: relative;
+  text-decoration: none;
+  width: 320px;
+}
+
+.card__background,
+.card__kitty {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card__background {
+  color: $linkColor;
+  z-index: 0;
+}
+
+.card__kitty {
+  z-index: 1;
+}
+
+.card__information {
+  box-sizing: border-box;
+  color: $defaultFontColor;
+  height: 100%;
+  padding: 21px 8px 8px 50px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.card__tagline {
+  color: $middleFontColor;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  line-height: 19px;
+  margin-bottom: 6px;
+}
+
+.card__title {
+  font-size: 48px;
+  letter-spacing: 2px;
+  line-height: 54px;
+  transform: translateX(-2px);
+}
+
+.card__foodstuff {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.card__descriptionItem {
+  color: $middleFontColor;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__highlighted {
+  font-weight: 600;
+}
+
+.card__weight {
+  background-color: $linkColor;
+  border-radius: 50%;
+  bottom: 16px;
+  color: #fff;
+  height: 80px;
+  position: absolute;
+  right: 16px;
+  width: 80px;
+}
+
+.card__value {
+  font-size: 42px;
+  left: 50%;
+  line-height: 42px;
+  position: absolute;
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+.card__unit {
+  bottom: 9px;
+  font-size: 21px;
+  left: 50%;
+  line-height: 21px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.card__messages {
+  padding-top: 14px;
+  width: 100%;
+}
+
+//
+//.card:hover:not(.card--disabled) {
+//
+//}
+//
+//
+//.card--active {
+//  .card__background {
+//    color: $activeColor;
+//  }
+//
+//  .card__weight {
+//    background-color: $activeColor;
+//  }
+//}
+//
+//.card--disabled {
+//  .card__information,
+//  .card__descriptionItem,
+//  .card__tagline {
+//    color: $disabledFontColor;
+//  }
+//
+//  .card__background {
+//    color: $disabledColor;
+//  }
+//
+//  .card__kitty {
+//    opacity: 0.5;
+//  }
+//
+//  .card__weight {
+//    background-color: $disabledColor;
+//  }
+//}

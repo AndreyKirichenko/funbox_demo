@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: $commonBackgroundColor;
+  background-image: url('/img/bg_x1.png');
+
+  @media /* only for retina displays */
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    background-image: url('/img/bg_x2.png');
+  }
+
+  background-size: 70px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1.4em;
+  min-height: 100vh;
+}

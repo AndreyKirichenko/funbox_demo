@@ -1,4 +1,4 @@
-# Webpack 4 simple start kit
+# FunBox
 
 Webpack4 + Pug + es2015 + scss
 

@@ -1,0 +1,10 @@
+svg(style='position: absolute; width: 0; height: 0; overflow: hidden;', version='1.1', xmlns='http://www.w3.org/2000/svg')
+  defs
+    symbol#svgBillet(viewbox='0 0 320 480')
+      path#svgBilletPath(d='M306.1 2H44.5L2 44.6v421.5c0 6.6 5.3 11.9 11.9 11.9h292.3c6.5 0 11.9-5.3 11.9-11.9V13.9C318 7.3 312.7 2 306.1 2z', fill='#f2f2f2', stroke='currentColor', stroke-width='4')
+
+    symbol#svgKitty(viewbox='0 0 320 480')
+      image(xlink:href='/img/kitty.png', x='-1' y='206', mask='url(#svgBilletMask)', width=265, height=273)
+
+    mask#svgBilletMask(viewbox='0 0 320 480')
+      path#svgBilletMaskPath(d='M304.2 4H45.9L4 46.2v418c0 6.5 5.2 11.8 11.7 11.8h288.5c6.4 0 11.7-5.3 11.7-11.8V15.8c0-6.5-5.2-11.8-11.7-11.8z', fill='#fff')

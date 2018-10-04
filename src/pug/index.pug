@@ -1,6 +1,176 @@
+doctype html
 html
   head
-    script(type='application/javascript', src='dist/app.js')
-    link(rel='stylesheet', media='screen', href='/dist/app.css')
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    title FunBox demo
+
   body
-    .title Hello world!
+    include _svg
+    .page
+      .page__content
+        h1.page__title
+          | Ты сегодня покормил кота?
+
+        ul.cards
+          li.cards__item
+            .card
+              .card__billet
+                svg.card__background
+                  use(xlink:href='#svgBillet')
+
+                svg.card__kitty
+                  use(xlink:href='#svgKitty')
+
+                .card__information
+                  h2.card__tagline
+                    | Сказочное заморское яство
+
+                  .card__title
+                    | Нямушка
+
+                  .card__foodstuff
+                    | с фуа-гра
+
+                  ul.card__description
+                    li.card__descriptionItem
+                      span.card__highlighted
+                        | 10&nbsp;
+                      | порций
+
+                    li.card__descriptionItem
+                      | мышь в подарок
+
+                  .card__weight
+                    .card__value
+                      | 0,5
+
+                    .card__unit
+                      | кг
+
+              .card__messages
+                .cardMessage.card__message.card__message--default
+                  span.cardMessage__text
+                    | Чего сидишь? Порадуй котэ,&nbsp;
+
+                  a.cardMessage__link.link(href='#')
+                    | купи
+
+                  span.cardMessage__text.cardMessage__text--likeLink
+                    | .
+
+                .cardMessage.card__message.card__message--selected
+                  span.cardMessage__text
+                    | Печень утки разварная с артишоками.
+
+                .cardMessage.card__message.card__message--selected
+                  span.cardMessage__text.cardMessage__text--warning
+                    | Печалька, с фуа-гра закончился.
+
+          li.cards__item
+            .card
+              .card__billet
+                svg.card__background
+                  use(xlink:href='#svgBillet')
+
+                svg.card__kitty
+                  use(xlink:href='#svgKitty')
+
+                .card__information
+                  h2.card__tagline
+                    | Сказочное заморское яство
+
+                  .card__title
+                    | Нямушка
+
+                  .card__foodstuff
+                    | с фуа-гра
+
+                  ul.card__description
+                    li.card__descriptionItem
+                      span.card__highlighted
+                        | 10&nbsp;
+                      | порций
+
+                    li.card__descriptionItem
+                      | мышь в подарок
+
+                  .card__weight
+                    .card__value
+                      | 0,5
+
+                    .card__unit
+                      | кг
+
+              .card__messages
+                .cardMessage.card__message.card__message--default
+                  span.cardMessage__text
+                    | Чего сидишь? Порадуй котэ,&nbsp;
+
+                  a.cardMessage__link.link(href='#')
+                    | купи
+
+                  span.cardMessage__text.cardMessage__text--likeLink
+                    | .
+
+                .cardMessage.card__message.card__message--selected
+                  span.cardMessage__text
+                    | Печень утки разварная с артишоками.
+
+                .cardMessage.card__message.card__message--selected
+                  span.cardMessage__text.cardMessage__text--warning
+                    | Печалька, с фуа-гра закончился.
+
+          li.cards__item
+            .card
+              .card__billet
+                svg.card__background
+                  use(xlink:href='#svgBillet')
+
+                svg.card__kitty
+                  use(xlink:href='#svgKitty')
+
+                .card__information
+                  h2.card__tagline
+                    | Сказочное заморское яство
+
+                  .card__title
+                    | Нямушка
+
+                  .card__foodstuff
+                    | с фуа-гра
+
+                  ul.card__description
+                    li.card__descriptionItem
+                      span.card__highlighted
+                        | 10&nbsp;
+                      | порций
+
+                    li.card__descriptionItem
+                      | мышь в подарок
+
+                  .card__weight
+                    .card__value
+                      | 0,5
+
+                    .card__unit
+                      | кг
+
+              .card__messages
+                .cardMessage.card__message.card__message--default
+                  span.cardMessage__text
+                    | Чего сидишь? Порадуй котэ,&nbsp;
+
+                  a.cardMessage__link.link(href='#')
+                    | купи
+
+                  span.cardMessage__text.cardMessage__text--likeLink
+                    | .
+
+                .cardMessage.card__message.card__message--selected
+                  span.cardMessage__text
+                    | Печень утки разварная с артишоками.
+
+                .cardMessage.card__message.card__message--selected
+                  span.cardMessage__text.cardMessage__text--warning
+                    | Печалька, с фуа-гра закончился.

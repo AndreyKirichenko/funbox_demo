@@ -1,0 +1,18 @@
+.cardMessage {
+  display: block;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.cardMessage__text {
+  color: $lightestFontColor;
+}
+
+.cardMessage__text--likeLink {
+  color: $linkColor;
+}
+
+.cardMessage__text--warning {
+  color: $warningFontColor;
+}
