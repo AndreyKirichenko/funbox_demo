@@ -1,5 +1,28 @@
 .cards {
   display: flex;
-  justify-content: space-between;
-  width: 1120px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+
+  @media (min-width: 768px) {
+    justify-content: space-around;
+    width: 720px;
+  }
+
+  @media (min-width: 1260px) {
+    justify-content: space-between;
+    width: 1120px;
+  }
+}
+
+.cards__item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1260px) {
+    margin-bottom: 0;
+  }
 }

@@ -44,6 +44,7 @@ let conf = {
       template : './src/pug/index.pug'
     }),
     new CopyWebpackPlugin([
+      { from: 'src/data/', to: 'data/', force: true },
       { from: 'src/img/', to: 'img/', force: true },
       { from: 'src/fonts/', to: 'fonts/', force: true }
     ], {})

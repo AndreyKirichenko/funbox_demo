@@ -1,7 +1,7 @@
 {
-  "name": "my_webpack_starkir",
+  "name": "funbox_demo",
   "version": "1.0.0",
-  "description": "My webpack 4 start kit",
+  "description": "My FunBox test task!",
   "main": "src/js/app.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
@@ -21,7 +21,8 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
@@ -36,5 +37,10 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }

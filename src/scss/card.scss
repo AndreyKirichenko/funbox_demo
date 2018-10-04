@@ -1,4 +1,5 @@
 .card {
+  cursor: pointer;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   position: relative;
 }
@@ -41,20 +42,22 @@
 
 .card__tagline {
   color: $middleFontColor;
+  display: block;
   font-size: 16px;
-  letter-spacing: -0.4px;
   line-height: 19px;
   margin-bottom: 6px;
 }
 
 .card__title {
+  display: block;
   font-size: 48px;
-  letter-spacing: 2px;
+  letter-spacing: 0.2px;
   line-height: 54px;
   transform: translateX(-2px);
 }
 
 .card__foodstuff {
+  display: block;
   font-size: 24px;
   font-weight: 600;
   line-height: 28px;
@@ -67,7 +70,7 @@
   line-height: 16px;
 }
 
-.card__highlighted {
+.card__number {
   font-weight: 600;
 }
 
@@ -105,38 +108,54 @@
   width: 100%;
 }
 
-//
-//.card:hover:not(.card--disabled) {
-//
-//}
-//
-//
-//.card--active {
-//  .card__background {
-//    color: $activeColor;
-//  }
-//
-//  .card__weight {
-//    background-color: $activeColor;
-//  }
-//}
-//
-//.card--disabled {
-//  .card__information,
-//  .card__descriptionItem,
-//  .card__tagline {
-//    color: $disabledFontColor;
-//  }
-//
-//  .card__background {
-//    color: $disabledColor;
-//  }
-//
-//  .card__kitty {
-//    opacity: 0.5;
-//  }
-//
-//  .card__weight {
-//    background-color: $disabledColor;
-//  }
-//}
+
+.card:not(.card--disabled) .card__billet:hover {
+  .card__background {
+    color: $linkHoverColor;
+  }
+
+  .card__weight {
+    background-color: $linkHoverColor;
+  }
+}
+
+.card--active {
+  .card__background,
+  .card__tagline {
+    color: $activeColor;
+  }
+
+  .card__weight {
+    background-color: $activeColor;
+  }
+}
+
+.card--active:not(.card--disabled) .card__billet:hover {
+  .card__background,
+  .card__tagline {
+    color: $activeHoverColor;
+  }
+  .card__weight {
+    background-color: $activeHoverColor;
+  }
+}
+
+.card--disabled {
+  .card__information,
+  .card__descriptionItem,
+  .card__tagline {
+    color: $disabledFontColor;
+  }
+
+  .card__background {
+    color: $disabledColor;
+  }
+
+  .card__kitty {
+    opacity: 0.5;
+  }
+
+  .card__weight {
+    background-color: $disabledColor;
+  }
+}
