@@ -4,6 +4,10 @@
   justify-content: center;
   width: 320px;
 
+  @media (min-width: 768px) {
+    width: auto;
+  }
+
   @media (min-width: 1260px) {
     justify-content: space-between;
     width: 1120px;
