@@ -6,8 +6,8 @@
   text-decoration: none;
 
   &:before {
-    bottom: 0;
     border-bottom: 1px dashed $linkColor;
+    bottom: 0;
     content: '';
     height: 1px;
     position: absolute;

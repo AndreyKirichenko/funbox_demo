@@ -4,11 +4,12 @@ html, body {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+
   background-color: $commonBackgroundColor;
   background-image: url('/img/bg_x1.png');
+  box-sizing: border-box;
 
   @media /* only for retina displays */
   only screen and (-webkit-min-device-pixel-ratio: 2),

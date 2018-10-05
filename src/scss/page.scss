@@ -17,11 +17,13 @@
 }
 
 .page__title {
+  box-sizing: border-box;
   color: $lightestFontColor;
   font-family: 'Exo 2.0', Helvetica, Arial, sans-Serif;
   font-size: 36px;
   line-height: 48px;
   margin-bottom: 21px;
+  padding: 0 16px;
   text-align: center;
   width: 100%;
 }
