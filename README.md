@@ -1,6 +1,6 @@
 # FunBox
 
-Webpack4 + Pug + es2015 + scss
+My demo task implementation!
 
 ### Installing
 
