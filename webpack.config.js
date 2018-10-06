@@ -30,15 +30,16 @@ let conf = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
           'sass-loader'
         ],
       }
     ]
   },
+
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'app.css',
-      // path: '/'
+      filename: 'app.css'
     }),
     new HtmlWebpackPlugin({
       template : './src/pug/index.pug'
