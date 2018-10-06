@@ -152,12 +152,12 @@ class Card extends PureComponent {
   }
 
   createCardMessage() {
-    const props = {...this.props.MESSAGES};
+    const messages = this.props.MESSAGES;
     const isSelected = this.isSelected();
     const isDisabled = this.isDisabled();
 
     return (
-        <CardMessage {...props}
+        <CardMessage messages={messages}
                      isSelected={isSelected}
                      isDisabled={isDisabled}
                      onLinkClickHandler={this.onLinkClickHandler}

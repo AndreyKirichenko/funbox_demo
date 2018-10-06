@@ -1,25 +1,23 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import Card from './card';
 
-class Cards extends PureComponent {
-  static createCards(cardsData) {
-    return cardsData.map((cardData, index) => {
+const Cards = ({cards}) => {
+
+  function createCards(cards) {
+    return cards.map((card, index) => {
       return (
           <li className='cards__item' key={index}>
-            <Card {...cardData} />
+            <Card {...card} />
           </li>
       );
     });
   }
 
-  render() {
-    let cardsData = this.props.CARDS;
-    return (
+  return (
       <ul className='cards'>
-        {Cards.createCards(cardsData)}
+        {createCards(cards)}
       </ul>
-    );
-  }
-}
+  );
+};
 
 export default Cards;

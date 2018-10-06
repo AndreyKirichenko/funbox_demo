@@ -1,58 +1,54 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import classNames from 'classnames';
 
-class CardMessage extends PureComponent {
+const CardMessage = ({isDisabled, isSelected, onLinkClickHandler, messages}) => {
 
-  createCardMessageInner() {
-    if(this.props.isDisabled){
-      return this.createDisabled()
-    } else if(this.props.isSelected){
-      return this.createSelected();
+  function createCardMessageInner() {
+    if(isDisabled){
+      return createDisabled()
+    } else if(isSelected){
+      return createSelected();
     }
 
-    return this.createDefault();
+    return createDefault();
   }
 
-  createDisabled() {
+  function createDisabled() {
     return (
         <div className={classNames('cardMessage__text', 'cardMessage__text--warning')}>
-          {this.props.DISABLED}
+          {messages.DISABLED}
         </div>
     );
   }
 
-  createSelected() {
+  function createSelected() {
     return (
         <div className='cardMessage__text'>
-          {this.props.SELECTED}
+          {messages.SELECTED}
         </div>
     );
   }
 
-  createDefault() {
-    const clickHandler = this.props.onLinkClickHandler;
-
+  function createDefault() {
     return (
         <Fragment>
           <span className='cardMessage__text'>
-            {this.props.DEFAULT.MESSAGE}
+            {messages.DEFAULT.MESSAGE}
           </span>
           {` `}
-          <span className={classNames('cardMessage__link', 'link')} onClick={clickHandler}>
-            {this.props.DEFAULT.BUY_LINK_TEXT}
+          <span className={classNames('cardMessage__link', 'link')} onClick={onLinkClickHandler}>
+            {messages.DEFAULT.BUY_LINK_TEXT}
           </span>
           <div className={classNames('cardMessage__text', 'cardMessage__text--likeLink')}>.</div>
         </Fragment>
     );
   }
 
-  render() {
-    return (
-        <div className='cardMessage'>
-          {this.createCardMessageInner()}
-        </div>
-    );
-  }
-}
+  return (
+      <div className='cardMessage'>
+        {createCardMessageInner()}
+      </div>
+  );
+};
 
 export default CardMessage;
