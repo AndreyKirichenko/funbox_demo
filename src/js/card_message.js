@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import classNames from 'classnames';
 
 const CardMessage = ({isDisabled, isSelected, onLinkClickHandler, messages}) => {
-
   function createCardMessageInner() {
     if(isDisabled){
       return createDisabled()

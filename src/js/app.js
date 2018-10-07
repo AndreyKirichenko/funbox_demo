@@ -4,10 +4,13 @@ import '../pug/index.pug'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'whatwg-fetch';
+import "@babel/polyfill";
+
 import Page from './page'
 
 
-let loadingData = fetch('/data/data.json')
+let loadingData = fetch('/data/data.json', {method: 'GET'})
     .then(function(response){
       let contentType = response.headers.get("content-type");
       if(contentType && contentType.includes("application/json")) {
